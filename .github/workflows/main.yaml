@@ -13,7 +13,7 @@ jobs:
 
     - name: build
       run: |
-        sudo apt update -y && apt install build-essential ninja-build git-all cmake python3 libicu-dev -y
+        sudo apt update -y && sudo apt install build-essential ninja-build git-all cmake python3 libicu-dev -y
         git clone https://github.com/facebook/hermes.git
         cmake -S hermes -B build -G Ninja
         cmake --build ./build
