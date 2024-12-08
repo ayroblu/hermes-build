@@ -15,7 +15,10 @@ jobs:
       run: |
         sudo apt update -y && sudo apt install ninja-build cmake -y
         git clone https://github.com/facebook/hermes.git
-        cmake -S hermes -B build -G Ninja
-        cmake --build ./build
+        HERMES_WS_DIR="$(pwd)"
+        cmake -S hermes -B ./build
+        cmake --build ./build --target hermesc
+        # cmake -S hermes -B build -G Ninja
+        # cmake --build ./build
         cd hermes/android && ./gradlew
 
