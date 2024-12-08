@@ -20,5 +20,5 @@ jobs:
         cmake --build ./build --target hermesc
         # cmake -S hermes -B build -G Ninja
         # cmake --build ./build
-        cd hermes/android && ./gradlew
+        cd hermes/android && ./gradlew build
 
