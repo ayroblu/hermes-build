@@ -14,7 +14,7 @@ jobs:
     - name: build
       run: |
         sudo apt update -y && sudo apt install ninja-build cmake -y
-        git clone https://github.com/facebook/hermes.git
+        git clone https://github.com/ayroblu/hermes.git
         export HERMES_WS_DIR="$(pwd)"
         cmake -S hermes -B ./build
         cmake --build ./build --target hermesc
