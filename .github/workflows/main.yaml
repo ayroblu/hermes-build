@@ -27,6 +27,6 @@ jobs:
       with:
         name: build
         path: |
-          build
-          build_android
+          build/bin
+          build_android/outputs
 
